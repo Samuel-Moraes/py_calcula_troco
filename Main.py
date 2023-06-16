@@ -1,5 +1,5 @@
 custo = float(input("Digite o total da compra: "))
-val = float(input("Digite o valor: "))
+val = float(input("Digite o valor recebido: "))
 val = val - custo
 
 if val > 0:
