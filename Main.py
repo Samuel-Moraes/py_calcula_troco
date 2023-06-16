@@ -23,27 +23,26 @@ print('''
 |############################################|
 ''')
 
-global_funcion.calcula_troco()
+val = global_funcion.calcula_troco()
 
-'''
-  for i in notas:
+
+for i in notas:
     numNotas.append(val/i)
     val %= i
 
-  for i in moedas:
+for i in moedas:
       numMoedas.append(val/i)
       val %= i
 
-  print(" ") 
+print(" ") 
 
-  for i in range(len(notas)):
+for i in range(len(notas)):
     print("Notas de %d = %d" % (notas[i], numNotas[i]))
 
-  print("")
+print("")
 
-  for i in range(len(moedas)):
+for i in range(len(moedas)):
     print("Moedas de %a = %d" % (moedas[i], numMoedas[i]))
   
 else:
   print("Valor do pagamento é inferiror ao valor da compra")
-'''
