@@ -1,35 +1,47 @@
-custo = float(input("Digite o total da compra: "))
-val = float(input("Digite o valor recebido: "))
-val = val - custo
+import global_funcion
 
-if val > 0:
-  notas = [100, 50, 20, 10, 5]
-  notas.sort()
-  notas.reverse() 
+numNotas = []
+numMoedas = []
 
-  moedas = [1, 0.50, 0.25, 0.10, 0.05, 0.01]
-  moedas.sort()
-  moedas.reverse()
+# Valores que podem ser recebidos
 
-  numNotas = []
-  numMoedas = []
+# Notas
+notas = [100, 50, 20, 10, 5]
+notas.sort()
+notas.reverse() 
 
-  for i in notas:
+# Moedas
+moedas = [1, 0.50, 0.25, 0.10, 0.05, 0.01]
+moedas.sort()
+moedas.reverse()
+
+print('''
+|############################################|
+|  Bem vindo ao sisteme de calculo de Troco  |
+|############################################|
+|Criado por Samuel Moraes                    |
+|############################################|
+''')
+
+val = global_funcion.calcula_troco()
+
+
+for i in notas:
     numNotas.append(val/i)
     val %= i
 
-  for i in moedas:
+for i in moedas:
       numMoedas.append(val/i)
       val %= i
 
-  print(" ") 
+print(" ") 
 
-  for i in range(len(notas)):
+for i in range(len(notas)):
     print("Notas de %d = %d" % (notas[i], numNotas[i]))
 
-  print("")
+print("")
 
-  for i in range(len(moedas)):
+for i in range(len(moedas)):
     print("Moedas de %a = %d" % (moedas[i], numMoedas[i]))
   
 else:
