@@ -52,3 +52,12 @@ def mostrador(notas, moedas, numNotas, numMoedas):
     for i in range(len(moedas)):
         print("Moedas de %a = %d" % (moedas[i], numMoedas[i]))
     print('')
+
+def chama_cabecalho():
+    print('''
+|############################################|
+|  Bem vindo ao sisteme de calculo de Troco  |
+|############################################|
+|Criado por Samuel Moraes                    |
+|############################################|
+''')
