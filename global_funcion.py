@@ -24,7 +24,7 @@ def calcula_notas(val):
     numMoedas = []
 
     moedas = [1, 0.50, 0.25, 0.10, 0.05, 0.01]
-    notas = [100, 50, 20, 10, 5]
+    notas = [200, 100, 50, 20, 10, 5]
     moedas.sort()
     moedas.reverse()
 
