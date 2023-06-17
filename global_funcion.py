@@ -1,3 +1,11 @@
+import subprocess
+import os
+
+# Limpa o console
+def limpar_console():
+    subprocess.call('clear' if os.name == 'posix' else 'cls', shell=True)
+#
+
 def calcula_troco(): 
     repetidor = 1
     total_compra = float(input("Digite o total da compra: "))
